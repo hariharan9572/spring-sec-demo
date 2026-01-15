@@ -1,4 +1,4 @@
-package com.hariharan.springsecdemo;
+package com.hariharan.springsecdemo.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
