@@ -20,7 +20,7 @@ import java.util.function.Function;
 @Service
 public class JwtService {
 
-    private static final String SECRET ="c1B5Q2t6V3dQd3F0Z3F5R0h2R2Z3M2N4V2VxS0x2QWZzYlE=";
+    private static final String SECRET = "TmV3U2VjcmV0S2V5Rm9ySldUU2lnbmluZ1B1cnBvc2VzMTIzNDU2Nzg=\r\n";
 
     private String secretKey;
 
