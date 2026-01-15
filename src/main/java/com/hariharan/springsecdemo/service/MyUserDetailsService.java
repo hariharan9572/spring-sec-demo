@@ -2,6 +2,7 @@ package com.hariharan.springsecdemo.service;
 
 import com.hariharan.springsecdemo.dao.UserRepo;
 import com.hariharan.springsecdemo.model.User;
+import com.hariharan.springsecdemo.model.UserPrincipal;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -24,6 +25,6 @@ public class MyUserDetailsService implements UserDetailsService {
             throw new UsernameNotFoundException("User 404");
         }
 
-        return null;
+        return new UserPrincipal(user);
     }
 }
