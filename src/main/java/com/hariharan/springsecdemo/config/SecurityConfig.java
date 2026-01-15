@@ -63,10 +63,13 @@ public class SecurityConfig {
         http.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));*/
 
         http.csrf(customizer -> customizer.disable())
-            .authorizeHttpRequests(request -> request.anyRequest().authenticated())
-            .httpBasic(Customizer.withDefaults())
-            .sessionManagement(session ->
-                    session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
+                    .authorizeHttpRequests(request -> request
+                            .requestMatchers("/register")
+                            .permitAll()
+                    .anyRequest().authenticated())
+                    .httpBasic(Customizer.withDefaults())
+                    .sessionManagement(session ->
+                            session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
 
         return http.build();
     }
